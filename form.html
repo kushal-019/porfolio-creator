@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+   *{
+        text-transform: capitalize;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container{
+         display: flex;
+        flex-direction: column;
+        flex-wrap: wrap; 
+        height: 100vh;
+        width: 100%;
+    }
+    @media only screen and (max-width:1000px){
+        .container{
+            flex-direction:row;
+            height: 100%;
+        }
+    }
+    .form-layout{
+        display:grid;
+        align-items: center;
+        grid-template-columns: 40% 40% ;
+        column-gap: 20px;
+        height: 100%;
+        justify-content: space-evenly;
+    }
+    
+    .left, .right{
+        margin-top: 30px;
+    }
+    .grid{
+        padding: 10px;
+    }
+
+    input,textarea{
+        border-radius: 20px;
+        padding: 10px;
+        border: none;
+        background-color:lightgoldenrodyellow;
+
+    }
+    input:hover,textarea:hover{
+        background-color:rgb(207, 207, 126);
+    }
+    .output{
+        background-color: yellow;
+        height: 100%;
+        display: inline-block;
+        width: inherit;
+        padding: 50px  100px;
+       
+    }
+    .second{
+        display:block;
+        width: 100%;
+        height: 100%; 
+    }
+    h1,h2,span{
+        padding:30px 60px;
+    }
+    span{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: larger;
+        color: rgb(21, 132, 17);
+    }
+    button{
+        margin: 0;padding: 5px;
+        max-width: 100px;
+        background-color: rgba(0, 0, 0, 0.701);
+        color: white;
+        border-radius: 15px;
+        border: none;
+    }
+    button:hover{
+        color: black;
+        background-color: white;
+        border: 1px solid black;
+    }
+
+
+    .heading{
+            display: flex;
+            flex-direction: row;
+            background-color: rgb(124, 121, 121) ;
+            padding: 10px 5px 0 5px;
+            justify-content: space-between;
+            
+        }
+        /* header{
+            position: sticky;
+            top:0vh;
+        } */
+        .navigation a{
+            margin:0.5px 5px 0 5px;
+            text-decoration: none;
+            color: beige;
+            text-align: right;
+            font-size:larger;
+        }
+        .logo{
+            color:white;
+            margin: 0;
+            padding: 0;
+        }
+        /* .login{
+            font-size: large;
+            color: black;
+            background-color: white;
+            text-decoration: none;
+            padding: 10px;
+            border: 1px solid beige;
+            border-radius: 35px;
+        }
+        .login:hover{
+            font-size: large;
+            color: white;
+            text-decoration: none;
+            padding: 8px;
+            border: 1px solid  rgb(43, 29, 246);
+            background-color: black;
+            border-radius: 35px;
+        } */
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="heading">
+            <div class="logo">
+                <p><img src="Screenshot 2023-04-25 100040.png" alt="logo" width="80px" height="40px"></p>
+            </div><div class="navigation">
+        <nav>
+            <a class="icon" href="index.html">home</a>&nbsp;|&nbsp;
+            <a class="icon" href="">about</a>&nbsp;|&nbsp;
+            <a class="icon" href="form.html">portfolio</a>&nbsp;|&nbsp;
+            <a class="icon" href="#contact">contact us</a>
+        </nav>
+    </div>
+    <!-- <div >
+    <a href="login.html" class="login">login/sign up</a>
+    </div> -->
+</div>
+</header>
+    <div class="container">
+        <div class="form">
+            <h1>enter your details</h1>
+            <form action="submit" class="form-layout">
+                <div class="left">
+                    <div class="grid">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="grid">
+                        <label for="contact">Phone No. :</label>
+                        <input type="tel" id="contact" name="contact">
+                    </div>
+                    <div class="grid">
+                        <label for="language">language:</label>
+                        <textarea  name="language" id="language" ></textarea>
+                    </div>
+                    <div class="grid">
+                        <label for="education">education:</label>
+                        <textarea  name="education" id="education"></textarea>
+                    </div>
+                    <div class="grid">
+                        <label for="project">Projects:</label>
+                        <textarea  name="project" id="project"></textarea>
+                    </div>    
+                </div>
+
+            <div class="right">
+                    <div class="grid">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="grid">
+                    <label for="address">address:</label>
+                    <input type="text" id="address" name="address">
+                    </div>
+                    <div class="grid">
+                    <label for="experience">experience:</label>
+                    <textarea name="experience" id="experience"></textarea>
+                    </div>
+                    <div class="grid">
+                    <label for="skills">Skills:</label>
+                    <textarea  name="skills" id="skills"></textarea>
+                    </div>
+                    <div class="grid">
+                    <label for="reference">Reference:</label>
+                    <textarea  name="reference" id="reference"></textarea>
+                    </div>
+            </div>
+            <button type="submit" value="submit">submit</button>
+            </form>
+        </div>
+\
+<div class="second">
+        <div class="output">
+        <h1>
+            portfolio
+        </h1>
+        <table>
+        <tr><td><h1>Name : </h1><span id="output-name"></span></td>
+        <td><h2>Email : </h2><span id="output-email"></span></td></tr>
+        <tr><td><h2>contact : </h2><span id="output-contact"></span></td>
+        <td><h2>address : </h2><span id="output-address"></span></td></tr>
+        <tr><td><h2>experience : </h2><span id="output-experience"></span></td>
+        <td><h2>language : </h2><span id="output-language"></span></td></tr>
+        <tr><td><h2>education : </h2><span id="output-education"></span></td>
+        <td><h2>skills : </h2><span id="output-skills"></span></td></tr>
+        <tr><td><h2>project : </h2><span id="output-project"></span></td>
+        <td><h2>reference : </h2><span id="output-reference"></span></td></tr>
+    </table>
+        </div>
+    </div>
+    </div>
+    <script>    const form = document.querySelector('form');
+        const outputName = document.querySelector('#output-name');
+        const outputEmail = document.querySelector('#output-email');
+        const outputContact = document.querySelector('#output-contact');
+        const outputExperience = document.querySelector('#output-experience');
+        const outputLanguage = document.querySelector('#output-language');
+        const outputAddress = document.querySelector('#output-address');
+        const outputEducation = document.querySelector('#output-education');
+        const outputSkills = document.querySelector('#output-skills');
+        const outputProject = document.querySelector('#output-project');  
+        const outputReference = document.querySelector('#output-reference');
+        
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+          outputName.textContent = form.elements.name.value;
+          outputEmail.textContent = form.elements.email.value;
+          outputContact.textContent = form.elements.contact.value;
+          outputExperience.textContent = form.elements.experience.value;
+          outputLanguage.textContent = form.elements.language.value;
+          outputAddress.textContent = form.elements.address.value;
+          outputEducation.textContent = form.elements.education.value;
+          outputSkills.textContent = form.elements.skills.value;
+          outputProject.textContent = form.elements.project.value;
+          outputReference.textContent = form.elements.reference.value;
+          form.reset();
+        });</script>
+</body>
+</html>
