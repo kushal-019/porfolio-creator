@@ -5,133 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style>
-   *{
-        text-transform: capitalize;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .container{
-         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap; 
-        height: 100vh;
-        width: 100%;
-    }
-    @media only screen and (max-width:1000px){
-        .container{
-            flex-direction:row;
-            height: 100%;
-        }
-    }
-    .form-layout{
-        display:grid;
-        align-items: center;
-        grid-template-columns: 40% 40% ;
-        column-gap: 20px;
-        height: 100%;
-        justify-content: space-evenly;
-    }
-    
-    .left, .right{
-        margin-top: 30px;
-    }
-    .grid{
-        padding: 10px;
-    }
-
-    input,textarea{
-        border-radius: 20px;
-        padding: 10px;
-        border: none;
-        background-color:lightgoldenrodyellow;
-
-    }
-    input:hover,textarea:hover{
-        background-color:rgb(207, 207, 126);
-    }
-    .output{
-        background-color: yellow;
-        height: 100%;
-        display: inline-block;
-        width: inherit;
-        padding: 50px  100px;
-       
-    }
-    .second{
-        display:block;
-        width: 100%;
-        height: 100%; 
-    }
-    h1,h2,span{
-        padding:30px 60px;
-    }
-    span{
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: larger;
-        color: rgb(21, 132, 17);
-    }
-    button{
-        margin: 0;padding: 5px;
-        max-width: 100px;
-        background-color: rgba(0, 0, 0, 0.701);
-        color: white;
-        border-radius: 15px;
-        border: none;
-    }
-    button:hover{
-        color: black;
-        background-color: white;
-        border: 1px solid black;
-    }
-
-
-    .heading{
-            display: flex;
-            flex-direction: row;
-            background-color: rgb(124, 121, 121) ;
-            padding: 10px 5px 0 5px;
-            justify-content: space-between;
-            
-        }
-        /* header{
-            position: sticky;
-            top:0vh;
-        } */
-        .navigation a{
-            margin:0.5px 5px 0 5px;
-            text-decoration: none;
-            color: beige;
-            text-align: right;
-            font-size:larger;
-        }
-        .logo{
-            color:white;
-            margin: 0;
-            padding: 0;
-        }
-        /* .login{
-            font-size: large;
-            color: black;
-            background-color: white;
-            text-decoration: none;
-            padding: 10px;
-            border: 1px solid beige;
-            border-radius: 35px;
-        }
-        .login:hover{
-            font-size: large;
-            color: white;
-            text-decoration: none;
-            padding: 8px;
-            border: 1px solid  rgb(43, 29, 246);
-            background-color: black;
-            border-radius: 35px;
-        } */
-
-    </style>
-
+    <link rel="stylesheet" href="form.css">
 </head>
 <body>
     <header>
@@ -146,9 +20,6 @@
             <a class="icon" href="#contact">contact us</a>
         </nav>
     </div>
-    <!-- <div >
-    <a href="login.html" class="login">login/sign up</a>
-    </div> -->
 </div>
 </header>
     <div class="container">
@@ -157,53 +28,53 @@
             <form action="submit" class="form-layout">
                 <div class="left">
                     <div class="grid">
-                    <label for="name">Name:</label>
+                    <label for="name">Name:</label><br>
                     <input type="text" id="name" name="name" required>
                     </div>
                     <div class="grid">
-                        <label for="contact">Phone No. :</label>
+                        <label for="contact">Phone No. :</label><br>
                         <input type="tel" id="contact" name="contact">
                     </div>
                     <div class="grid">
-                        <label for="language">language:</label>
+                        <label for="language">language:</label><br>
                         <textarea  name="language" id="language" ></textarea>
                     </div>
                     <div class="grid">
-                        <label for="education">education:</label>
+                        <label for="education">education:</label><br>
                         <textarea  name="education" id="education"></textarea>
                     </div>
                     <div class="grid">
-                        <label for="project">Projects:</label>
+                        <label for="project">Projects:</label><br>
                         <textarea  name="project" id="project"></textarea>
                     </div>    
                 </div>
-
             <div class="right">
                     <div class="grid">
-                    <label for="email">Email:</label>
+                    <label for="email">Email:</label><br>
                     <input type="email" id="email" name="email" required>
                     </div>
                     <div class="grid">
-                    <label for="address">address:</label>
+                    <label for="address">address:</label><br>
                     <input type="text" id="address" name="address">
                     </div>
                     <div class="grid">
-                    <label for="experience">experience:</label>
+                    <label for="experience">experience:</label><br>
                     <textarea name="experience" id="experience"></textarea>
                     </div>
                     <div class="grid">
-                    <label for="skills">Skills:</label>
+                    <label for="skills">Skills:</label><br>
                     <textarea  name="skills" id="skills"></textarea>
                     </div>
                     <div class="grid">
-                    <label for="reference">Reference:</label>
+                    <label for="reference">Reference:</label><br>
                     <textarea  name="reference" id="reference"></textarea>
                     </div>
             </div>
+            <br>
             <button type="submit" value="submit">submit</button>
             </form>
         </div>
-\
+<center>
 <div class="second">
         <div class="output">
         <h1>
@@ -224,7 +95,9 @@
         </div>
     </div>
     </div>
-    <script>    const form = document.querySelector('form');
+</center>
+    <script> 
+        const form = document.querySelector('form');
         const outputName = document.querySelector('#output-name');
         const outputEmail = document.querySelector('#output-email');
         const outputContact = document.querySelector('#output-contact');
@@ -249,6 +122,7 @@
           outputProject.textContent = form.elements.project.value;
           outputReference.textContent = form.elements.reference.value;
           form.reset();
-        });</script>
+        });
+     </script>
 </body>
 </html>

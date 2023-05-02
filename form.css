@@ -1,0 +1,131 @@
+*{
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+}
+@media only screen and (max-width:1000px){
+    .container{
+        flex-direction:row;
+        height: 100%;
+    }
+}
+.form-layout{
+    display:grid;
+    align-items: center;
+    grid-template-columns: 25% 25%;
+    height: 100%;
+    justify-content: center;
+}
+.form{
+    text-align:center;
+}
+.left, .right{
+    margin-top: 30px;
+}
+.grid{
+    padding: 10px 0px;
+}
+
+input,textarea{
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    background-color:lightgoldenrodyellow;
+
+}
+input:hover,textarea:hover{
+    background-color:rgb(207, 207, 126);
+}
+.output{
+    background-color: yellow;
+    height: 100%;
+    display: inline-block;
+    justify-content: center;
+    width: inherit;
+    background: url(3fa94e52c33ab17b73b4d8440130ec96.jpg);
+    background-size: cover;
+    margin: 0;
+    padding: 50px;
+   
+}
+.second{
+    display:block;
+    width:100vw ;
+    height: 100%;
+}
+h1,h2,span{
+    padding:30px 60px;
+}
+span{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    font-weight: 500;
+    color:rgb(206, 14, 37);
+}
+button{
+    margin: 20px;padding: 10px;
+    max-width: 100px;
+    background-color: rgba(0, 0, 0, 0.701);
+    color: white;
+    border-radius: 15px;
+    border: none;
+}
+button:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+table tr {
+    column-gap: 50vw;
+}
+
+
+.heading{
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(124, 121, 121) ;
+        padding: 10px 5px 0 5px;
+        justify-content: space-between;
+        
+    }
+    
+    .navigation a{
+        margin:0.5px 5px 0 5px;
+        text-decoration: none;
+        color: beige;
+        text-align: right;
+        font-size:larger;
+    }
+    .logo{
+        color:white;
+        margin: 0;
+        padding: 0;
+    }
+    .icon {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  text-decoration: none;
+    color: yellow;
+    padding:5px 5px 3px 5px;
+    margin: 0;
+}
+.icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background-color:beige;
+  transform: scaleX(0); 
+  transition: transform 0.3s ease-in-out;
+}
+.icon:hover::after {
+  transform: scaleX(1); 
+}
