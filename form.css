@@ -13,6 +13,9 @@
         flex-direction:row;
         height: 100%;
     }
+    .form-layout{
+        column-gap: 20px;
+    }
 }
 .form-layout{
     display:grid;
