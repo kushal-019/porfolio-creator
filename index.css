@@ -33,26 +33,17 @@ header{
 .login{
     font-size: x-large;
     color: beige;
-    /* background-color: white; */
-    /* text-decoration: none; */
     padding: 10px; 
-    /* border: 1px solid beige; */
-    /* border-radius: 35px; */
 }
 .login:hover{
     font-size: x-large;
-    color: white;
-    /* text-decoration: none; */
     padding: 8px;
-    /* border: 1px solid  rgb(43, 29, 246);
-    background-color: black;
-    border-radius: 35px; */
+    color: white;
 }
 .container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
 }
 .image{
     min-width: 72%;
@@ -85,7 +76,6 @@ header{
 .images{
     border: 1px solid black;
     margin: 5px;
-    /* width: 80vw; */
 }
 .contact{
     text-align: center;
@@ -132,10 +122,6 @@ transform: scaleX(1);
         min-width: 80vw;
         padding:50px 20px ;
     }
-    .login{
-    color: white;
-    background-color: black;
-}
     .images{
         max-width: 50vw;
     }
