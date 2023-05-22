@@ -2,15 +2,13 @@
     margin: 0;
     padding: 0;
     text-transform: capitalize;
-    font-weight: 800;
 }
 .heading{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
-    background-color: rgb(124, 121, 121) ;
-    padding: 10px 5px 10px 5px;
+    background-color: rgba(0, 0, 0, 0.773) ;
+    padding: 1em 1em 1em 1em;
     justify-content: space-between;
 }
 
@@ -25,6 +23,9 @@ header{
     text-align: right;
     font-size:larger;
 }
+.marquee{
+    font-family:Helvetica, sans-serif;
+}
 .logo{
     color:white;
     margin: 0;
@@ -33,7 +34,7 @@ header{
 .login{
     font-size: x-large;
     color: beige;
-    padding: 10px; 
+    padding: 1rem; 
 }
 .login:hover{
     font-size: x-large;
@@ -43,7 +44,7 @@ header{
 .container{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 .image{
     min-width: 70%;
@@ -55,7 +56,7 @@ header{
     font-weight:bolder;
     font-size: xx-large;
     max-width: 25%;
-    display:block;
+    display:inline-block;
     background-color: beige;
 }   
 
@@ -73,13 +74,17 @@ header{
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+.img1{
+    width: 40vw;
+}
 .images{
-    border: 1px solid black;
-    margin: 5px;
+    width: auto;
 }
 .contact{
     text-align: center;
-    background-color:  rgb(124, 121, 121) ;
+    /* background-color:  rgb(124, 121, 121) ; */
+    background-color: rgba(33, 31, 31, 0.773) ;
+
     color: white;
     padding: 2vh 0 1vh 0;
 }
@@ -117,32 +122,49 @@ transition: transform 0.3s ease-in-out;
 transform: scaleX(1); 
 }
 
-@media only screen and (max-width:700px){
+@media only screen and (max-width:600px){
     .title{
         min-width: 80vw;
         padding:50px 20px ;
     }
-    .images{
-        max-width: 50vw;
+    .img1{
+        width: 100%;
     }
     .examples{
         justify-content:left;
     }
+    .examples{
+        flex-direction: column;
+    }
+    .icon{
+        padding: 1px;
+        margin: 0px;
+    }
+    .navigation a{
+        padding: 0;
+        margin: 0;
+    }
 }
 
-@media only screen and (max-width:700px) {
+@media only screen and (max-width:600px) {
     .heading{
     flex-direction: column;
+    padding: 5px;
     
+}
+.login{
+    font-size: medium;
 }
 .heading p{
     padding: 10px 0 ;
 }
 .heading nav {
-    padding: 10px 0 30px 0;
+    padding: 3px 0 10px 0;
+    font-size: small;
 } 
 .container{
     min-width: 100vw;
+    flex-wrap: wrap;
 }
 
 }

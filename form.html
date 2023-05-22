@@ -11,118 +11,130 @@
     <header>
         <div class="heading">
             <div class="logo">
-                <p><img src="Screenshot 2023-04-25 100040.png" alt="logo" width="80px" height="40px"></p>
+                <a href="index.html"><p><img src="Screenshot 2023-04-25 100040.png" alt="logo" width="80px" height="40px"></p></a>
             </div><div class="navigation">
         <nav>
             <a class="icon" href="index.html">home</a>&nbsp;|&nbsp;
-            <a class="icon" href="">about</a>&nbsp;|&nbsp;
-            <a class="icon" href="form.html">portfolio</a>&nbsp;|&nbsp;
-            <a class="icon" href="#contact">contact us</a>
+            <a class="icon" href="about.html">about</a>&nbsp;|&nbsp;
+            <a class="icon" href="form.html">portfolio</a>
         </nav>
     </div>
 </div>
 </header>
     <div class="container">
-        <div class="form">
+        <div><center>
             <h1>enter your details</h1>
-            <form action="submit" class="form-layout">
-                <div class="left">
-                    <div class="grid">
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="grid">
-                        <label for="contact">Phone No. :</label><br>
-                        <input type="tel" id="contact" name="contact">
-                    </div>
-                    <div class="grid">
-                        <label for="language">language:</label><br>
-                        <textarea  name="language" id="language" ></textarea>
-                    </div>
-                    <div class="grid">
-                        <label for="education">education:</label><br>
-                        <textarea  name="education" id="education"></textarea>
-                    </div>
-                    <div class="grid">
-                        <label for="project">Projects:</label><br>
-                        <textarea  name="project" id="project"></textarea>
-                    </div>    
-                </div>
-            <div class="right">
-                    <div class="grid">
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="grid">
+            
+            <form action="display.html" method="get">
+                
+                
+                <div class="form-layout">
+                    <div>
+                        <div class="grid">
+                            <label for="name">Name:</label><br>
+                            <input type="text" id="name" name="name" required>
+                            
+                        </div>
+                        <div class="grid">
+                            <label for="contact">Phone No. :</label><br>
+                            <input type="tel" id="contact" name="contact">
+                            
+                        </div>
+                    </div><div>
+                        <div class="grid">
+                            <label for="email">Email:</label><br>
+                            <input type="email" id="email" name="email" required>
+                            
+                        </div>
+                <div class="grid">
                     <label for="address">address:</label><br>
                     <input type="text" id="address" name="address">
-                    </div>
-                    <div class="grid">
-                    <label for="experience">experience:</label><br>
-                    <textarea name="experience" id="experience"></textarea>
-                    </div>
-                    <div class="grid">
-                    <label for="skills">Skills:</label><br>
-                    <textarea  name="skills" id="skills"></textarea>
-                    </div>
-                    <div class="grid">
-                    <label for="reference">Reference:</label><br>
-                    <textarea  name="reference" id="reference"></textarea>
-                    </div>
+                </div>
             </div>
-            <br>
-            <button type="submit" value="submit">submit</button>
-            </form>
         </div>
-<center>
-<div class="second">
-        <div class="output">
-        <h1>
-            portfolio
-        </h1>
-        <table>
-        <tr><td><h1>Name : </h1><span id="output-name"></span></td>
-        <td><h2>Email : </h2><span id="output-email"></span></td></tr>
-        <tr><td><h2>contact : </h2><span id="output-contact"></span></td>
-        <td><h2>address : </h2><span id="output-address"></span></td></tr>
-        <tr><td><h2>experience : </h2><span id="output-experience"></span></td>
-        <td><h2>language : </h2><span id="output-language"></span></td></tr>
-        <tr><td><h2>education : </h2><span id="output-education"></span></td>
-        <td><h2>skills : </h2><span id="output-skills"></span></td></tr>
-        <tr><td><h2>project : </h2><span id="output-project"></span></td>
-        <td><h2>reference : </h2><span id="output-reference"></span></td></tr>
-    </table>
+        <button type="submit" value="submit">submit</button>
+    </form>
+    
+    <div class="form-layout">
+        
+        <div class="left">
+            
+            <div class="grid">
+                <label for="language">language:</label><br>
+                <textarea  name="language" id="language" ></textarea><br>
+                <button id="lang-btn"  >add</button>
+            </div>
+            <div class="grid">
+                <label for="education">education:</label><br>
+                <textarea  name="education" id="education"></textarea><br>
+                    <button id="edu-btn">add</button>
+                </div>
+                <div class="grid">
+                    <label for="project">Projects:</label><br>
+                    <textarea  name="project" id="project"></textarea><br>
+                    <button id="project-btn">add</button>
+                </div>    
+            </div>
+            <div class="right">
+                
+                <div class="grid">
+                    <label for="experience">experience:</label><br>
+                    <textarea name="experience" id="experience"></textarea><br>
+                    <button id="exp-btn" >add</button>
+                </div>
+                <div class="grid">
+                    <label for="skills">Skills:</label><br>
+                    <textarea  name="skills" id="skills"></textarea><br>
+                    <button id="skills-btn" >add</button>
+                </div>
+                <div class="grid">
+                    <label for="reference">Reference:</label><br>
+                    <textarea  name="reference" id="reference"></textarea><br>
+                    <button id="ref-btn" >add</button>
+                </div>
+            </div>
         </div>
-    </div>
     </div>
 </center>
-    <script> 
-        const form = document.querySelector('form');
-        const outputName = document.querySelector('#output-name');
-        const outputEmail = document.querySelector('#output-email');
-        const outputContact = document.querySelector('#output-contact');
-        const outputExperience = document.querySelector('#output-experience');
-        const outputLanguage = document.querySelector('#output-language');
-        const outputAddress = document.querySelector('#output-address');
-        const outputEducation = document.querySelector('#output-education');
-        const outputSkills = document.querySelector('#output-skills');
-        const outputProject = document.querySelector('#output-project');  
-        const outputReference = document.querySelector('#output-reference');
+<a href="display.html" target="_blank"><button>check</button></a>
+    <center>
+        <div class="output">
+            <div class="second">
+                <h1>
+            portfolio
+        </h1>
+        </div>
+        <div class="second">
+
         
-        form.addEventListener('submit', function(event) {
-          event.preventDefault();
-          outputName.textContent = form.elements.name.value;
-          outputEmail.textContent = form.elements.email.value;
-          outputContact.textContent = form.elements.contact.value;
-          outputExperience.textContent = form.elements.experience.value;
-          outputLanguage.textContent = form.elements.language.value;
-          outputAddress.textContent = form.elements.address.value;
-          outputEducation.textContent = form.elements.education.value;
-          outputSkills.textContent = form.elements.skills.value;
-          outputProject.textContent = form.elements.project.value;
-          outputReference.textContent = form.elements.reference.value;
-          form.reset();
-        });
+        <table style="text-align: center;">
+            <tr>
+                <td><h1>Name : </h1><span id="output-name"></span></td>
+                <td><h2>Email : </h2><span id="output-email"></span></td>
+            </tr>
+            <tr>
+                <td><h2>contact : </h2><span id="output-contact"></span></td>
+                <td><h2>address : </h2><span id="output-address"></span></td>
+            </tr>
+            <tr>
+                <td id="out-exp"><h2>experience : </h2></td>
+                <td id="out-lang"><h2>language : </h2></td>
+            </tr>
+            <tr>
+                <td id="out-edu"><h2>education : </h2></span></td>
+                <td id="out-skills"><h2>skills : </h2></td>
+            </tr>
+            <tr>
+                <td id="out-project"><h2>project : </h2></td>
+                <td id="out-ref"><h2>reference : </h2></td>
+            </tr>
+        </table>
+        </div>
+    </div>
+</center>
+    </div>
+    <script src="form.js"> 
+       
      </script>
 </body>
 </html>

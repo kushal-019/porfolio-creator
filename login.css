@@ -9,8 +9,6 @@
 
         }
         body{
-
-
             background:url(https://t4.ftcdn.net/jpg/01/22/71/95/360_F_122719584_A863mvJEcEAnqmGQ4ky6RbXEhsHKw95x.jpg);
             background-size: cover;
             height: 100%;
@@ -22,11 +20,10 @@
             min-width: 300px;
             margin-top: 50px;
             justify-content: space-around;
-
             align-items: center;
-            /* background-color:ivory; */
             height: fit-content;
             backdrop-filter:blur(5px);
+            border-radius: 45px;
             width: fit-content;
         }
         div input{
