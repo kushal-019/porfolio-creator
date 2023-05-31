@@ -8,16 +8,22 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    
     <div class="container">
         <div>
             <p>login to already existing account</p>
-            <form action="#">
-            <input type="text" name="email" class="input" required placeholder="email"><br>
-            <input type="password" name="password" class="input" required placeholder="Password"><br>
+            <form >
+
+
+                <div id="invalid" class="in1" style="background-color: rgba(202, 70, 8, 0.87) ;margin: 0 2rem;  padding: 5px; display: none;">invalid credentials</div>
+                <div id="success" class="in2" style="background-color: #10f06ab8; margin: 0 2rem; display: none; padding: 5px;">login successful</div>
+
+
+
+            <input type="email" name="email" class="input"  id="input1" required placeholder="email"><br>
+            <input type="password" name="password" class="input" id="input2" required placeholder="Password"><br>
             <input type="checkbox" name="checkbox" class="input">
-            <label for="checkbox">remember me</label><br>
-            <button value="submit" class="button">login</button>
+            <label for="checkbox" >remember me</label><br>
+            <button class="button" id="btn" >login</button>
         </form>
             </div>
             <div class="division">
@@ -30,8 +36,33 @@
             <div>
                 *************************
                 <p class="division">dont have an account</p>
-                <a href="#"></a><button class="button">create</button></a>
+                <a href="create.html"><button class="button" >register</button></a>
             </div>
         <div>
 </body>
+<script>
+    var a=document.getElementById("btn");
+    var b=document.getElementById("input1");
+    var c=document.getElementById("input2");
+    var d=document.getElementById("invalid");
+    var e=document.getElementById("success");
+    a.addEventListener("click",function(f){
+        if((b.value ==="kushal1835.be22@chitkara.edu.in"|| b.value==="kgoel8451@gmail.com") && c.value ==="12345678"){
+        e.style.display="block";
+        f.preventDefault();
+        setTimeout(()=>{ window.open("index2.html");
+        window.close("login.html");},800);
+       
+    }
+    else if(b.value !="" || c.value !=""){
+        // alert("invalid credentials");
+        d.style.display="block";
+        f.preventDefault();
+            
+        }
+       
+    })
+    
+
+</script>
 </html>

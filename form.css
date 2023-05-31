@@ -6,10 +6,18 @@
 
 .container {
   height: 100%;
-  width: 100vw;
+  width: 100%;
   background: url(patrick-langwallner-3pR7d-tIRx8-unsplash.jpg);
+  text-align: center;
   background-size: cover;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
+/* #container{
+  
+} */
 
 .form-layout {
   display: flex;
@@ -18,6 +26,9 @@
   flex-direction: row;
   height: 100%;
   justify-content: center;
+}
+#section {
+  display: none;
 }
 
 .grid {
@@ -40,6 +51,13 @@ textarea:hover {
   justify-content: center;
   margin: 0;
 }
+table {
+  background-color: white;
+  min-width: 40vw;
+  min-height: 80vh;
+  padding: 0 0 10px 0;
+  border-radius: 10%;
+}
 
 h1,
 h2,
@@ -51,7 +69,7 @@ td li {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: larger;
   font-weight: 500;
-  justify-content: center;
+  padding-left: 40px;
   color: rgb(206, 14, 37);
 }
 button {
@@ -75,7 +93,7 @@ table tr {
 .heading {
   display: flex;
   flex-direction: row;
-  background-color: rgba(0, 0, 0, 0.773) ;
+  background-color: rgba(0, 0, 0, 0.773);
   padding: 10px 5px 0 5px;
   justify-content: space-between;
 }
@@ -116,11 +134,39 @@ table tr {
   transform: scaleX(1);
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 800px) {
   .container {
-    flex-direction: column;
-    height: 100vw;
-    width: min-content;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100%;
+  }
+  table {
+    background-color: white;
+    min-width: 10%;
+    max-width: 15%;
+    min-height: 50vh;
+    padding: 0 0 10px 0;
+    border-radius: 10%;
+  }
+  table h2,
+  table span,
+  table h1 {
+    padding: 15px;
+  }
+
+  span,
+  td li {
+    font-size: small;
+  }
+  input,
+  textarea,
+  button {
+    padding: 7px;
+  }
+  button {
+    margin: 2px;
   }
 }
 @media only screen and (max-width: 300px) {
@@ -129,5 +175,30 @@ table tr {
     justify-content: space-between;
     height: 100%;
     width: 100%;
+  }
+}
+@media print {
+  header,
+  .input {
+    display: none;
+  }
+  .output {
+    height: 100%;
+    justify-content: center;
+    margin: 0;
+    /* background: white; */
+    background: url(patrick-langwallner-3pR7d-tIRx8-unsplash.jpg);
+    background-size: cover;
+  }
+  table {
+    background: transparent;
+    padding-bottom: 50px;
+  }
+  button {
+    display: none;
+  }
+  h2,
+  h1 {
+    padding: 15px 20px;
   }
 }

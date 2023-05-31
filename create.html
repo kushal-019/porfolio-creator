@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign up</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div>
+            <p>create account</p>
+            <form >
+            <div id="invalid"  style="background-color: rgba(202, 70, 8, 0.87)  ;margin: 0 2rem; padding: 5px; display: none;">Password do not match</div>
+                <div id="success" style="background-color: #10f06ab8; margin: 0 2rem; padding: 5px; display: none;">registration successful</div>
+            <input type="email" name="email" class="input" id="input2" required placeholder="email"><br>
+            <input type="password" name="password" class="input" id="input3" required placeholder="Password"><br>
+            <input type="password" name="password" class="input" id="input4" required placeholder=" confirm Password"><br>
+            
+            <label><input type="checkbox" name="checkbox" class="input" required> terms of service and privacy policy</label><br>
+            <button class="button" id="button">register</button>
+        </form>
+            </div>
+            <div>
+                *************************
+                <p class="division">already have an account</p>
+                <a href="login.html"><button class="button">login</button></a>
+            </div>
+        <div>
+</body>
+<script>
+    var a=document.getElementById("button");
+    var b=document.getElementById("input4");
+    var c=document.getElementById("input2");
+    var d=document.getElementById("input3");
+    var h=document.getElementById("invalid");
+    var g=document.getElementById("success");
+    a.addEventListener("click",function(e) {
+        if(b.value != d.value){
+            h.style.display="block";
+        e.preventDefault();
+        // setTimeout((h.style.display="none"),-2000);
+        }
+        else if(b.value !="" && c.value !="" && d.value !=""){
+            g.style.display="block";
+            e.preventDefault();
+        
+        setTimeout(()=>{ window.open("index2.html");
+        window.close("create.html");},800);
+            
+        }
+    })
+    
+</script>
+</html>
